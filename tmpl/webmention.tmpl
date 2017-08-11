@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title><!-- tmpl_var name="pagetitle" --></title>
+<!-- tmpl_include name="inc_basemetalink.tmpl" -->
+    <!-- <link rel="stylesheet" type="text/css" href="<!-- tmpl_var name="css_dir_url" -->/wren.css"  />  -->
+    <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
+</head>
+<style>
+<!-- tmpl_include name="inc_minified-css.tmpl" -->
+.webmention-container {}
+.webmention-mention {border-bottom: 1px solid #e0e0e0;padding-bottom:20px;margin-bottom:20px;}
+.webmention-author {font-size: 80%;}
+.webmention-name {font-weight:normal;}
+.webmention-summary {margin-top:20px;}
+.webmention-footer {}
+.webmention-published {font-size:80%;}
+<!-- tmpl_if using_custom_css -->
+<!-- tmpl_var name="custom_css" -->
+<!-- /tmpl_if -->
+</style>
+
+<body>
+
+<div class="home-link">
+<a href="<!-- tmpl_var name="home_page" -->">home</a>
+</div>
+
+<!-- tmpl_include name="inc_articlehtml.tmpl" -->
+
+
+<article>
+
+<script id="webmention-hosted">
+(function () {
+var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
+url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
+url = url && url[0] ? url[0].href : false;
+sn.type = "text/javascript"; sn.async = true;
+sn.src = "//webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location);
+s.parentNode.insertBefore(sn, s);
+}());
+</script>
+
+
+</article>
+
+<!-- tmpl_include name="footer.tmpl" -->
+
+</body>
+</html>

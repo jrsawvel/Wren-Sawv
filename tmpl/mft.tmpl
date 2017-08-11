@@ -1,0 +1,15 @@
+<!-- tmpl_include name="header.tmpl" -->
+<article>
+<header>
+<h1><!-- tmpl_var name="site_name" --> - <!-- tmpl_var name="site_description" --></h1>
+</header>
+<tmpl_loop name="article_loop">
+<p class="h-entry">
+  <a class="u-url" href="<!-- tmpl_var name="link" -->"><span class="p-name"><!-- tmpl_var name="title" --></span></a>
+  <br /><span class="p-summary"><!-- tmpl_var name="description" --></span>
+  <br /><time class="dt-published" datetime="<!-- tmpl_var name="pubDate" -->"><!-- tmpl_var name="pubDate" --></time>
+  <span class="p-author h-card" style="display:none;"><!-- tmpl_var name="author" --></span>
+</p>
+</tmpl_loop>
+</article>
+<!-- tmpl_include name="footer.tmpl" -->

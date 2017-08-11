@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:rss5="http://rss5.org/">
+  <channel>
+   <title><!-- tmpl_var name="site_name" --></title>
+   <link><!-- tmpl_var name="link" --></link>
+   <description><!-- tmpl_var name="site_name" --> <!-- tmpl_var name="site_description" --></description>
+   <pubDate><!-- tmpl_var name="current_date_time" --></pubDate> 
+   <language>en-us</language>
+   <generator><!-- tmpl_var name="app_name" --></generator>
+   <docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
+<tmpl_loop name="article_loop">    <item>
+     <title><!-- tmpl_var name="title" --></title>
+     <description><!-- tmpl_var name="description" --></description>
+     <pubDate><!-- tmpl_var name="pubDate" --></pubDate> 
+     <guid><!-- tmpl_var name="link" --></guid>
+     <link><!-- tmpl_var name="link" --></link>
+     <author><!-- tmpl_var name="author" --></author>
+    </item>
+</tmpl_loop>
+  </channel>
+ </rss>

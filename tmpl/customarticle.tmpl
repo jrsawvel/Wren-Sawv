@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title><!-- tmpl_var name="pagetitle" --></title>
+<!-- tmpl_include name="inc_basemetalink.tmpl" -->
+    <link rel="stylesheet" type="text/css" href="<!-- tmpl_var name="css_dir_url" -->/customarticle.css"  /> 
+<style>
+<!-- tmpl_include name="inc_minified-css.tmpl" -->
+<!-- tmpl_if using_custom_css -->
+<!-- tmpl_var name="custom_css" -->
+<!-- /tmpl_if -->
+</style>
+</head>
+
+<body>
+
+<!-- <div id="custom-article-largeimageheader" style="background-image: url('http://birdbrainsbrewing.com/images/backyard-redpolls-feb-mar-2008-b.jpg')"> -->
+<div id="custom-article-largeimageheader" style="background-image: url('<!-- tmpl_var name="imageheader" -->')">
+  <div class="vertical">
+    <div id="article-title"><!-- tmpl_var name="title" --></div>
+    <div id="article-description"><em><!-- tmpl_var name="page_description" --></em></div>
+  </div>
+</div>
+
+
+<!--
+<div class="home-link">
+<a href="<!-- tmpl_var name="home_page" -->">home</a>
+</div>
+-->
+
+<article>
+<header>
+<!-- tmpl_if usingtoc -->
+<div id="toc">
+<!-- tmpl_loop name="toc_loop" -->
+<span class="toclevel<!-- tmpl_var name="level" -->">- <a href="#<!-- tmpl_var name="cleantitle" -->"><!-- tmpl_var name="toclink" --></a></span><br />
+<!-- /tmpl_loop -->
+</div>
+<!-- /tmpl_if -->
+</header>
+<!-- tmpl_var name="html" -->
+</article>
+
+
+<!-- tmpl_include name="footer.tmpl" -->

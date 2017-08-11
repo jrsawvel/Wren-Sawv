@@ -1,0 +1,47 @@
+<!-- tmpl_include name="header.tmpl" -->
+
+<link rel="stylesheet" type="text/css" href="<!-- tmpl_var name="css_dir_url" -->/form.css"  /> 
+
+
+
+<!-- tmpl_if errorexists -->
+<p>
+<h2>Article Input Error</strong></h2>
+<!-- tmpl_var name="errormessage" -->
+</p>
+<!-- /tmpl_if -->
+
+
+<!-- tmpl_if previewingpost -->
+
+<!----------- Article Start ------------> 
+
+<!-- tmpl_include name="inc_articlehtml.tmpl" -->
+
+<!----------- Article End ------------> 
+
+<!-- /tmpl_if -->
+
+
+
+<!-- markup -->
+
+<center>
+<form id="articleform" method="post" action="/wren/createpost">
+<input type="hidden" name="post_location" value="text_area"> 
+
+<p>
+<textarea id="textareaboxpost" name="markup" rows="15" cols="60"><!-- tmpl_var name="markup" --></textarea>
+<br />
+<input class="submitbutton" type="submit" name="sb" value="Preview">
+ &nbsp; &nbsp;
+ <span class="greylinks"><a href="/wren/editorcreate"><small>editor</small></a></span>
+ &nbsp; &nbsp;
+<input class="submitbutton" type="submit" name="sb" value="Create">
+</p>
+
+</form>
+</center>
+
+<!-- tmpl_include name="footer.tmpl" -->
+

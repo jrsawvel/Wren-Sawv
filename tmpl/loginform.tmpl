@@ -1,0 +1,22 @@
+<!-- tmpl_include name="header.tmpl"  -->
+<link rel="stylesheet" type="text/css" href="/css/form.css"  /> 
+<article>
+<p>
+<form action="/wren/dologin" method="post">
+<strong>Wren login</strong><br />
+<input type="text" id="email" name="email" maxlength="50"/>
+<br />
+<input class="submitbutton" type="submit" value="Login" />
+</form>
+</p>
+<p>
+<form action="https://indieauth.com/auth" method="get">
+<strong>IndieAuth login</strong><br />
+  <input id="indie_auth_url" type="text" name="me" />
+  <br />
+  <input class="submitbutton" type="submit" value="Login" />
+  <input type="hidden" name="client_id" value="http://sawv.org" />
+  <input type="hidden" name="redirect_uri" value="http://sawv.org/api/v1/users/auth/" />
+</form>
+</article>
+<!-- tmpl_include name="footer.tmpl" -->

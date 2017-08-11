@@ -1,0 +1,18 @@
+<!-- tmpl_include name="header.tmpl" -->
+
+<article>
+
+<p>
+Search results for &ldquo;<!-- tmpl_var name="keyword" -->&rdquo;
+ - <a href="/wren/search/<!-- tmpl_var name="search_uri_str" -->">#</a>
+</p>
+
+<ul>
+<!-- tmpl_loop name="stream_loop" -->
+<li><a href="<!-- tmpl_var name="url" -->"><!-- tmpl_var name="uri" --></a></li>
+<!-- /tmpl_loop -->
+</ul>
+
+</article>
+
+<!-- tmpl_include name="footer.tmpl" -->

@@ -1,0 +1,24 @@
+<article class="h-entry">
+<header>
+<!-- tmpl_if usingtoc -->
+<div id="toc">
+<!-- tmpl_loop name="toc_loop" -->
+<span class="toclevel<!-- tmpl_var name="level" -->">- <a href="#<!-- tmpl_var name="cleantitle" -->"><!-- tmpl_var name="toclink" --></a></span><br />
+<!-- /tmpl_loop -->
+</div>
+<!-- /tmpl_if -->
+<h1 class="entry-title p-name"><!-- tmpl_var name="title" --></h1> 
+</header>
+<div class="entry-content e-content">
+<!-- tmpl_var name="html" -->
+</div> <!-- close e-content div -->
+
+<footer style="display:none;">
+<p>
+<a class="p-author h-card"  href="/about.html"><!-- tmpl_var name="author_name" --></a> - 
+<a class="u-url" href="<!-- tmpl_var name="url" -->#">#</a>
+</p>
+</footer>
+
+
+</article>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title><!-- tmpl_var name="pagetitle" --></title>
+<!-- tmpl_include name="inc_basemetalink.tmpl" -->
+    <!--    <link rel="stylesheet" type="text/css" href="<!-- tmpl_var name="css_dir_url" -->/wren.css"  />  -->
+    <link rel="stylesheet" type="text/css" href="<!-- tmpl_var name="css_dir_url" -->/custom3.css"  /> 
+</head>
+<!-- tmpl_if using_custom_css -->
+<style>
+<!-- tmpl_var name="custom_css" -->
+</style>
+<!-- /tmpl_if -->
+
+<body>
+<header> 
+<!-- tmpl_if usingtoc -->
+<!-- /tmpl_if -->
+<h1><!-- tmpl_var name="title" --></h1> 
+<h2>Fan of the open web</h2>
+</header>
+<article>
+<!-- tmpl_var name="html" -->
+</article>
+
+<br />
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+package ClientModules;
+use strict;
+use warnings;
+use diagnostics;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+use Shared::Config;
+use Shared::Page;
+use Shared::Utils;
+1;

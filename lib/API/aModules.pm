@@ -1,0 +1,11 @@
+package aModules;
+use strict;
+use warnings;
+use diagnostics;
+use CGI::Carp qw(fatalsToBrowser);
+use CGI qw(:standard);
+use Shared::Config;
+use Shared::Utils;
+use Shared::Page;
+use API::Error;
+1;
