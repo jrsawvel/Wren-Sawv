@@ -1,0 +1,173 @@
+center big em,
+h2 {
+    color: #444
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+    text-decoration: underline
+}
+
+body,
+hr,
+p {
+    margin-bottom: 40px
+}
+
+a:active,
+a:hover {
+    color: red
+}
+
+body {
+    background: #ffffff;
+    line-height: 38px;
+    color: #222;
+    padding: 0 5px;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 100%
+}
+
+h1 {
+    font-size: 28px
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+h3,
+h4 {
+    padding-top: 20px;
+    text-align: left;
+    color: #000
+}
+
+h2 {
+    font-weight: 400;
+    margin: 20px 0;
+    font-size: 25px;
+    font-style: italic
+}
+
+big {
+    font-size: 110%
+}
+
+p {
+    margin-top: 40px
+}
+
+img {
+    max-width: 100%
+}
+
+blockquote {
+    border-left: 1px solid #666;
+    background: #f2f2f2;
+    margin: 40px 0 40px 10px;
+    padding: 0 0 0 1em
+}
+
+code,
+pre {
+    font-size: 90%;
+    background: #f8f8f8;
+    padding: 2px 5px;
+    border: 1px solid #ddd
+}
+
+pre code {
+    border: none;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: 0 0;
+    padding: 0
+}
+
+li,
+ul {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+a {
+    color: #00f
+}
+
+a:visited {
+    color: #c39
+}
+
+.blacklinks a,
+.blacklinks a:visited {
+    color: #222;
+    text-decoration: none
+}
+
+article {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 21px;
+    letter-spacing: normal;
+    word-spacing: normal
+}
+
+.blacklinks a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.home-link {
+    line-height: 90%;
+    text-align: right;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    float: right;
+    position: absolute;
+    height: 20px;
+    text-transform: lowercase
+}
+
+.home-link a,
+.home-link a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.home-link a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.sitewide-footer {
+    margin-top: 20px;
+    text-align: center
+}
+
+.sitewide-footer a,
+.sitewide-footer a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.sitewide-footer a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    width: 100%;
+    margin-top: 40px
+}

@@ -1,0 +1,301 @@
+html {
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    line-height: 1.95rem;
+    margin: 0;
+    padding: 0;
+    font-family:Arial,sans-serif;
+    background-color: #f6f5de;
+    color: #333333;
+    font-size: 1.3rem;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #2B547E;
+    padding-top: 1.3rem; 
+    padding-bottom: 1.3rem; 
+    /* height: 100px; */
+}
+
+blockquote {
+    border-left: 1px solid #666;
+    /* background: #E3F2FD; blue-ish */
+    background: #f2f2f2;
+    /* background: #f5faff;  used at toledotalk - light blue */
+    margin: 35px 0 35px .6em;
+    padding: 0 0 0 1em;
+    /* font-family:Arial,sans-serif; */
+}
+
+a {
+    color: #0000ff;
+    text-decoration: underline; 
+}
+
+a:visited {
+    color: #cc3399;
+    text-decoration: underline; 
+} 
+
+a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline; 
+    color: #ff0000;
+}
+
+strong, b {
+    color: #000;
+}
+
+li, ul {
+    margin-bottom: 0.625rem;
+} 
+
+
+p {
+    padding: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    color: #f8f8f8;
+    text-align:center;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 20px;
+/*
+    margin-bottom: 20px;
+*/
+    padding: 0;
+    color: #ccc;
+    font-style: italic;
+    text-align:center;
+    font-size: 100%;
+}
+
+h3, h4 {
+    padding-top: 1.875rem;
+    text-align: left;
+    color: #000000;
+}
+
+hr {
+   border: 0; 
+   height: 1px; 
+   background: #ddd;
+   width: 100%;
+   margin-top:2rem;
+   margin-bottom:2rem;
+}
+
+article {
+    position: relative;
+    /* max-width: 42.5rem; 680 px */
+    max-width: 45rem; /* 720 px */
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    padding: 0;
+}
+
+pre code {
+    padding: 0
+}
+
+code,
+pre {
+    background: #f8f8f8;
+    padding: 2px 5px;
+    border: 1px solid #ddd
+}
+
+pre code {
+    border: none;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: 0 0
+}
+
+/**** custom commands ****/
+
+.smallscreens {
+    display: none;
+}
+
+.largescreens {
+    display: inline; 
+}
+
+.home-link {
+    line-height: 90%;
+    font-size: 85%;
+    text-align: left;
+    width: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    position: absolute;
+    height: 20px;
+    text-transform: lowercase
+}
+
+.home-link a,
+.home-link a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.home-link a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.sitewide-footer {
+    margin-top: 20px;
+    text-align: center
+}
+
+.sitewide-footer a,
+.sitewide-footer a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.sitewide-footer a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.blacklinks a,
+.blacklinks a:visited {
+    color: #222;
+    text-decoration: none
+}
+
+.blacklinks a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.greylinks {
+    font-size: 1.4rem;
+}
+
+.greylinks a,
+.greylinks a:visited {
+    color: #2B547E;
+    text-decoration: none
+}
+
+.greylinks a:hover {
+    text-decoration: underline
+}
+
+#toc {
+    font-size: .8em;
+    float: right;
+    background: #f0fff0;
+    display: inline;
+    width: 12.5em;
+    text-align: left;
+    border: 1px solid #ccc;
+    line-height: 1.2em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    margin: 1.2em 0 1.2em 1.2em
+}
+
+.toclevel1 {
+    margin-left: 0
+}
+
+.toclevel2 {
+    margin-left: .3em
+}
+
+.toclevel3 {
+    margin-left: .6em
+}
+
+.toclevel4 {
+    margin-left: .9em
+}
+
+.toclevel5 {
+    margin-left: 1.2em
+}
+
+    
+/***** Media Queries *****/
+
+/* 45rem = 720px */
+@media only screen and (max-width: 45rem) { 
+    article {
+        max-width: 90%;
+    }
+}
+
+/* 600 px */
+@media only screen and (max-width: 37.5rem ) { 
+    body {
+        font-size: 1.35rem;
+    }
+ 
+    blockquote {
+        padding: 0 0 0 .5em;
+        margin: 35px 0 35px 0; 
+    } 
+
+    ul {
+        padding-left: 1.25rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .smallscreens {
+        display: inline;
+    }
+
+    .largescreens {
+        display: none; 
+    }
+}
+
+
+/*
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+*/

@@ -1,0 +1,280 @@
+html {
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color:#333; 
+    color: #eee;   
+    font-family:  "Courier New", monospace, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.95rem;
+    margin: 0;
+}
+
+blockquote {
+    border-left: 1px solid #666;
+    color: #ccc;
+    background: #000;
+    margin: 35px 0 35px .6em;
+    padding: 0 0 0 1em;
+}
+
+a {
+    color: #3ff;
+    text-decoration: underline; 
+}
+
+a:visited {
+    color: #f9f;
+    text-decoration: underline; 
+} 
+
+a:hover {
+    color: #9acd32;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline; 
+    color: #ff0000;
+}
+
+strong, b {
+    color: #fff;
+}
+
+li, ul {
+    margin-bottom: 0.625rem;
+} 
+
+
+p {
+    padding: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    margin-top: 1.875rem;
+    text-align:center;
+    color: #fff;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    color: #777;
+    font-style: italic;
+    text-align:center;
+    font-size: 100%;
+}
+
+h3, h4 {
+    padding-top: 1.875rem;
+    text-align: left;
+    color: #fff;
+}
+
+hr {
+   border: 0; 
+   height: 1px; 
+   background: #ddd;
+   width: 100%;
+   margin-top:2rem;
+   margin-bottom:2rem;
+}
+
+article {
+    position: relative;
+    max-width: 45rem; 
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 0;
+}
+
+pre code {
+    padding: 0
+}
+
+code,
+pre {
+    background: #f8f8f8;
+    padding: 2px 5px;
+    border: 1px solid #ddd
+}
+
+pre code {
+    border: none;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: 0 0
+}
+
+/**** custom commands ****/
+
+.smallscreens {
+    display: none;
+}
+
+.largescreens {
+    display: inline; 
+}
+
+.home-link {
+    line-height: 90%;
+    font-size: 85%;
+    text-align: left;
+    width: 100%;
+    top: 0;
+    left: 0;
+    float: left;
+    position: absolute;
+    height: 20px;
+    text-transform: lowercase
+}
+
+.home-link a,
+.home-link a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.home-link a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.sitewide-footer {
+    margin-top: 20px;
+    text-align: center
+}
+
+.sitewide-footer a,
+.sitewide-footer a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.sitewide-footer a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.titlelinks a,
+.titlelinks a:visited {
+    color: #ccc;
+    text-decoration: none
+}
+
+.titlelinks a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+
+.greylinks a,
+.greylinks a:visited {
+    color: #666;
+    text-decoration: none
+}
+
+.greylinks a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+#toc {
+    font-size: .8em;
+    float: right;
+    background: #f0fff0;
+    display: inline;
+    width: 12.5em;
+    text-align: left;
+    border: 1px solid #ccc;
+    line-height: 1.2em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    margin: 1.2em 0 1.2em 1.2em
+}
+
+.toclevel1 {
+    margin-left: 0
+}
+
+.toclevel2 {
+    margin-left: .3em
+}
+
+.toclevel3 {
+    margin-left: .6em
+}
+
+.toclevel4 {
+    margin-left: .9em
+}
+
+.toclevel5 {
+    margin-left: 1.2em
+}
+
+    
+/***** Media Queries *****/
+
+/* 45rem = 720px */
+@media only screen and (max-width: 45rem) {
+    article {
+        max-width: 90%;
+    }
+
+    body {
+        font-size: 1.25rem;
+        font-family:  monospace, sans-serif;
+    }
+ 
+    blockquote {
+        padding: 0 0 0 .5em;
+        margin: 35px 0 35px 0; 
+    } 
+
+    ul {
+        padding-left: 1.25rem;
+    }
+
+    h1 {
+        margin-top: 30px
+    }
+
+    .smallscreens {
+        display: inline;
+    }
+
+    .largescreens {
+        display: none; 
+    }
+}
+
+
+/*
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+*/

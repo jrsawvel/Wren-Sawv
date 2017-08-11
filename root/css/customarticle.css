@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+
+#article-title {
+    color: #fff;
+    font-size: 120%;
+    font-weight: bold; 
+    display: block;
+    text-shadow: 2px 2px #000000; 
+    -moz-text-shadow: 2px 2px 2px #000000;
+    -webkit-text-shadow: 2px 2px 2px #000000;
+    filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
+#article-description {
+    line-height: 1.5em; 
+    display: block;
+    text-shadow: 2px 2px #000000; 
+    -moz-text-shadow: 2px 2px 2px #000000;
+    -webkit-text-shadow: 2px 2px 2px #000000;
+    filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 10; 
+    position: relative;
+    height: 200px;
+}
+
+/* tint the image */
+#custom-article-largeimageheader:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2); 
+    text-indent: -9999em;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+#custom-article-largeimageheader {
+    position: relative;
+    display: table;
+    width: 100%;
+    background: #000000 no-repeat center center; 
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/***** Media Queries *****/
+
+/* 600 px */
+@media only screen and (max-width: 37.5em) {
+    #article-title {
+        font-size: 110%;
+    }
+    .vertical {
+        height: 100px;
+    } 
+     #article-description {
+         font-size: 90%;
+    }
+}
