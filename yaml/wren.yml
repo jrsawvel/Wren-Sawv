@@ -10,8 +10,8 @@
     maincss_url:                    http://sawv.org/css/wren.css
     api_url:                        http://sawv.org/api/v1
     author_name:                    jr
-    author_email:                   sawv@riseup.net
-    author_email_2:                 jothut@fastmail.fm
+    author_email:                   primary-email-address 
+    author_email_2:                 secondary-email-address
     markup_storage:                 /home/sawv/Wren/markup
     session_id_storage:             /home/sawv/Wren/sessionids
     versions_storage:               /home/sawv/Wren/root/versions
