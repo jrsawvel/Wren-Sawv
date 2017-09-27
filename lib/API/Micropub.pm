@@ -388,6 +388,8 @@ sub _update_post {
         $hash_ref->{location} = Config::get_value_for("home_page") . "/" . $hash_ref->{slug} . ".html";
     }
 
+    $hash_ref->{micropub} = "yes";
+
     if ( !Files::output("update", $hash_ref, $markup) ) {
         Error::report_error("400", "Unable to update files.", "Unknown error.");
     }

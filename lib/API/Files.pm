@@ -56,7 +56,7 @@ sub output {
 
     my $html_output  = $t->create_html_page($hash_ref->{title});
 
-    if ( $submit_type eq "update" ) {
+    if ( $submit_type eq "update" and $hash_ref->{micropub} ne "yes" ) {
         $hash_ref->{slug} = $hash_ref->{original_slug};
     } 
 
