@@ -37,6 +37,11 @@ sub custom_commands {
     $formattedcontent =~ s/^fence[.]/<div class="fenceClass"><pre><code>/igm;
 
 
+    $formattedcontent =~ s/^q[.][.]/\n<\/blockquote>/igm;
+    $formattedcontent =~ s/^q[.]/<blockquote markdown="1">\n/igm;
+
+
+
     # 17mar2017 - added the three backtick support
     # hat tip to the regex in this answer: 
     # http://unix.stackexchange.com/questions/61139/extract-triple-backtick-fenced-code-block-excerpts-from-markdown-file

@@ -83,7 +83,7 @@ sub output {
        my $stream = _update_json_file($hash_ref); 
        _create_rss_file($hash_ref, $stream);
        _create_microformatted_file($hash_ref, $stream);
-       _create_sitemap_file($stream);
+#       _create_sitemap_file($stream);
     }
 
     _copy_to_s3_bucket($hash_ref, $markup, $html_output);
@@ -311,8 +311,6 @@ sub _create_rss_file {
 
     my $max_entries = Config::get_value_for("max_entries");
 
-    $max_entries = 20; # enough for rss feed;
-
     my @rss_stream = ();
     for ( my $i=0; $i<$max_entries and $i<$stream_len; $i++ ) {
 #        my $tmp_hash_ref = dclone $stream->[$i];
@@ -341,6 +339,7 @@ sub _create_rss_file {
                 }
             }
         }
+        delete($tmp_hash_ref->{author});
         push(@rss_stream, $tmp_hash_ref);
     } 
 
@@ -372,6 +371,16 @@ sub _create_rss_file {
 
 # commented out on 09aug2017
 #    S3::copy_to_s3(Config::get_value_for("rss_file"),  $rss_output, "text/xml");
+
+
+    
+
+    # nov 13, 2017 - micro.blog is still not open to everyone. it's the only reason to support their
+    # json feed format. until it's opened to all, then i'm not producing a reece-simmons 
+    # json feed format file.
+
+
+    return;
 
 
     ############## create JSON feed file
@@ -455,12 +464,15 @@ sub _create_microformatted_file {
     my $hash_ref = shift;
     my $stream = shift;
 
+    my $author_name = Config::get_value_for("author_name");
+
     my $stream_len = @$stream;
 
     my $max_entries = Config::get_value_for("max_entries");
     my @mft_stream = ();
     for ( my $i=0; $i<$max_entries and $i<$stream_len; $i++ ) {
         delete($stream->[$i]->{comma});
+        $stream->[$i]->{author} = $author_name;
         push(@mft_stream, $stream->[$i]);
     } 
 
