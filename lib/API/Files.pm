@@ -372,15 +372,10 @@ sub _create_rss_file {
 # commented out on 09aug2017
 #    S3::copy_to_s3(Config::get_value_for("rss_file"),  $rss_output, "text/xml");
 
-
     
 
-    # nov 13, 2017 - micro.blog is still not open to everyone. it's the only reason to support their
-    # json feed format. until it's opened to all, then i'm not producing a reece-simmons 
-    # json feed format file.
 
-
-    return;
+    my $author_name = Config::get_value_for("author_name");
 
 
     ############## create JSON feed file
@@ -402,7 +397,7 @@ sub _create_rss_file {
         $h->{id}              =  $hr->{link};     
         $h->{url}             =  $hr->{link};     
         $h->{title}           =  $hr->{title};     
-        $h->{author}          =  { "name" => $hr->{author} };
+        $h->{author}          =  { "name" => $author_name };
         $h->{date_published}  =  Utils::convert_date_time_to_iso8601_format($hr->{pubDate});     
         $h->{content_text}    =  $hr->{description};     
         push(@items, $h);
