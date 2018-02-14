@@ -9,6 +9,7 @@ use LWP::Simple;
 use Time::Local;
 use File::Path qw(make_path remove_tree);
 use JSON::PP;
+use HTML::Entities;
 use API::Error;
 # use API::S3;
 use API::Webmentions;
@@ -340,6 +341,7 @@ sub _create_rss_file {
             }
         }
         delete($tmp_hash_ref->{author});
+        $tmp_hash_ref->{title}  = HTML::Entities::encode_entities_numeric($tmp_hash_ref->{title}, '&');
         push(@rss_stream, $tmp_hash_ref);
     } 
 
@@ -392,6 +394,9 @@ sub _create_rss_file {
 
     my @items = ();
 
+
+# my $jan2018_ctr = 0;
+
     foreach my $hr ( @rss_stream ) {
         my $h;
         $h->{id}              =  $hr->{link};     
@@ -401,6 +406,11 @@ sub _create_rss_file {
         $h->{date_published}  =  Utils::convert_date_time_to_iso8601_format($hr->{pubDate});     
         $h->{content_text}    =  $hr->{description};     
         push(@items, $h);
+        
+#        $jan2018_ctr++;
+#        if ( $jan2018_ctr >= 5 ) {
+#            last;
+#        }
     }
     $json_hash_ref->{items}       = \@items;
     my $json_obj = JSON::PP->new->ascii->pretty;

@@ -30,7 +30,8 @@ sub create_post {
         $preview_only = 1;
     }
 
-
+# added migrate tmp code oct 9, 2017 jrs
+#    if ( $session_id ne "migrate" and !Auth::is_valid_login($logged_in_author_name, $session_id, $rev) and !$preview_only ) { 
     if ( !Auth::is_valid_login($logged_in_author_name, $session_id, $rev) and !$preview_only ) { 
         Error::report_error("400", "Unable to peform action.", "You are not logged in.");
     }
