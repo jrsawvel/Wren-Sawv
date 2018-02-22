@@ -39,8 +39,8 @@ sub output {
         $t->set_template_variable("imageheader", $hash_ref->{imageheader});
     }
 
-    if ( exists($hash_ref->{description}) ) {
-        $t->set_template_variable("description", $hash_ref->{description});
+    if ( exists($hash_ref->{page_description}) ) {
+        $t->set_template_variable("page_description", $hash_ref->{page_description});
     }
 
     if ( $hash_ref->{toc} ) {
